@@ -44,15 +44,15 @@ body, html {
 	transition: transform var(--transition), box-shadow var(--transition);
 }
 .slider__img {
-	/*width: 300%;  Удалено!*/
-	height: 100%;
-	background-size: cover;
-	position: relative; /*Изменено на relative*/
-	left: 0; /*Добавлено*/
-	transition: var(--transition)!important;
-	will-change: transform;
-	max-width: 100%; /*Добавлено для адаптивности*/
-	object-fit: cover; /*Добавлено для адаптивности*/
+    width: 300%;  /* Возвращаем */
+    height: 100%;
+    background-size: cover;
+    position: absolute; /* Возвращаем */
+    left: -100%; /* Возвращаем */
+    transition: var(--transition)!important;
+    will-change: transform;
+    max-width: none; /* Добавлено: убираем ограничение ширины для absolute */
+    object-fit: cover; /* Оставляем */
 }
 .slider_bg {
 	z-index: 0;
