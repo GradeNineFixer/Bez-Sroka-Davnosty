@@ -42,6 +42,8 @@ body, html {
 	overflow: hidden;
 	cursor: pointer;
 	transition: transform var(--transition), box-shadow var(--transition);
+	position: relative; /* Добавлено */
+   	width: 100%;
 }
 .slider__img {
     width: 300%;
