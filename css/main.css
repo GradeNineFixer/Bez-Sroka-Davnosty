@@ -44,8 +44,8 @@ body, html {
 	transition: transform var(--transition), box-shadow var(--transition);
 }
 .slider__img {
-	width: 300%;
-	height: 100%;
+	max-width: 100%;
+	height: auto;
 	background-size: cover;
 	position: absolute;
 	left: -100%;
