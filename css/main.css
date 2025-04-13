@@ -23,7 +23,7 @@
     font-size: 16px;
   }
   .slider-image {
-    height: 30vh; /* Или другое значение для мобильных */
+    height: 20vh; /* Или другое значение для мобильных */
   }
 }
 
@@ -31,6 +31,9 @@
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     font-size: 18px;
+  }
+  .slider-image {
+    height: 20vh; /* Или другое значение для мобильных */
   }
 }
 
