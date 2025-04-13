@@ -1,5 +1,5 @@
 const sliderMain = new Swiper('.slider_main', {
-	freeMode: true,
+	/*freeMode: true,  Удалите это*/
 	centeredSlides: true,
 	mousewheel: true,
 	parallax: true,
@@ -14,12 +14,14 @@ const sliderMain = new Swiper('.slider_main', {
 		}
 	}
 })
+
 const sliderBg = new Swiper('.slider_bg', {
 	centeredSlides: true,
 	parallax: true,
-	spaceBetween: 60,
+	/*spaceBetween: 60,  Удалите это*/
 	slidesPerView: 3.5
 })
+
 sliderMain.controller.control = sliderBg
 
 document.querySelectorAll('.slider__item').forEach(item => {
