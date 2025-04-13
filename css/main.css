@@ -33,9 +33,29 @@ html {
   line-height: 1.8;
 }
 
+/* Стили для Swiper */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: auto; /* Или height: 100%, если нужно фиксированную высоту */
+  position: relative;
+}
+
+.swiper-slide img { /* Если используете тег <img> вместо background-image */
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Ваши стили (с изменениями) */
 .slider {
   height: 100%;
-  transform: rotate(15deg);
+  /* transform: rotate(15deg);  Временно отключено */
   overflow: visible;
   top: 10vh;
 }
@@ -43,7 +63,7 @@ html {
 .slier__wrapper {
   transition: var(--transition) !important;
   will-change: transform;
-  height: 100%; /* Добавлено для корректной высоты слайдов */
+  height: 100%;
 }
 
 .slider__item {
@@ -51,23 +71,24 @@ html {
   overflow: hidden;
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
-  position: relative; /* Добавлено для правильного позиционирования */
-  width: 100%; /* Добавлено, чтобы слайды занимали всю ширину */
+  position: relative;
+  width: 100%;
 }
 
 .slider__img {
   height: 100%;
   background-size: cover;
-  background-position: center; /* Добавлено, чтобы изображение было центрировано */
-  position: absolute; /* Оставляем absolute, но нужны дополнительные свойства */
-  top: 0; /* Добавлено */
-  left: 0; /* Добавлено */
-  width: 100%; /* Задаем ширину 100% */
-  object-fit: cover; /* Добавлено, чтобы изображение правильно масштабировалось */
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
   transition: var(--transition) !important;
   will-change: transform;
 }
 
+/* Остальные стили (без изменений) */
 .slider_bg {
   z-index: 0;
   transform: rotate(-20deg) !important;
