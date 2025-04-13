@@ -67,7 +67,7 @@ html {
 }
 
 .slider__item {
-  max-height: 75vh;
+  /*max-height: 75vh;  Удалено */
   overflow: hidden;
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
@@ -88,20 +88,69 @@ html {
   will-change: transform;
 }
 
-/* Остальные стили (без изменений) */
+/* Упрощенный .slider_bg */
 .slider_bg {
-  z-index: 0;
-  transform: rotate(-20deg) !important;
+  position: absolute;
   top: -90vh;
   left: -10vh;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transform: rotate(-20deg);
   opacity: 0.15;
   filter: blur(120px) saturate(10);
+  overflow: hidden; /* Важно, чтобы изображения не выходили за границы */
 }
 
-.slider_bg .slider__item {
-  max-height: 0vh;
+.slider__bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Сначала скрыть все изображения */
+  animation: bg-fade 20s infinite; /* Настройте скорость и задержку */
 }
 
+.slider__bg-image:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slider__bg-image:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.slider__bg-image:nth-child(3) {
+  animation-delay: 10s;
+}
+
+/* Добавьте задержки для остальных изображений */
+
+@keyframes bg-fade {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Остальные стили (без изменений) */
 .slider__item.opened {
   z-index: 2;
   transform: rotate(-15deg) scale(1.45);
