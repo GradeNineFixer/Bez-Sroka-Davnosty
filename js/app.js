@@ -1,6 +1,5 @@
 const sliderMain = new Swiper('.slider_main', {
 	/*freeMode: true,  Удалите это*/
-	centeredSlides: true,
 	mousewheel: true,
 	parallax: true,
 	breakpoints: {
@@ -16,7 +15,6 @@ const sliderMain = new Swiper('.slider_main', {
 })
 
 const sliderBg = new Swiper('.slider_bg', {
-	centeredSlides: true,
 	parallax: true,
 	/*spaceBetween: 60,  Удалите это*/
 	slidesPerView: 3.5
